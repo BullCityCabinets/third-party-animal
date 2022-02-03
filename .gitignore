@@ -52,3 +52,8 @@ nuget.exe
 *.wmv
 *.pdb
 .vs/
+
+*.txt
+*.zip
+*.7z
+*.pdf
