@@ -1,6 +1,6 @@
 ﻿using _3PA.Core.Models;
 using MediatR;
-namespace _3PA.API.Services.PublicRecords.Consumer.Queries.GetCountyIdFromFilename
+namespace _3PA.API.Services.PublicRecords.Consumer.Queries.GetCountyIdFromFileName
 {
 	public class GetCountyIdFromFilenameHandler : IRequestHandler<GetCountyIdFromFileNameQuery, GetCountyIdFromFilenameResponse>
 	{

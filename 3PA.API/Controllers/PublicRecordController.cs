@@ -69,7 +69,7 @@ namespace _3PA.API.Controllers
 		{
 			try 
       {
-        return Ok(await _mediator.Send(new GetCountyIdFromFilenameQuery(usState, category, fileName)));
+        return Ok(await _mediator.Send(new GetCountyIdFromFileNameQuery(usState, category, fileName)));
       }
       catch (Exception)
       {
