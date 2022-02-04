@@ -25,7 +25,7 @@ namespace _3PA.API.Controllers
       {
         return Ok(await _mediator.Send(new CountyNamesQuery(usState)));
       }
-      catch (Exception ex)
+      catch (Exception)
       {
         return BadRequest("Failled to get county data.");
       }

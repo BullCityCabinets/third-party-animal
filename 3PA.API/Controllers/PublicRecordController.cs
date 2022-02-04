@@ -1,5 +1,6 @@
 ﻿using _3PA.API.Services.PublicRecords.Consumer.Commands;
 using _3PA.API.Services.PublicRecords.Consumer.Queries.GetCountyIdFromFilename;
+using _3PA.API.Services.PublicRecords.ManifestSummary.Queries.GetManifestSummary;
 using _3PA.API.Services.Users.ManifestSummary.Queries.GetManifestSummary;
 using _3PA.Core.Models;
 using MediatR;
@@ -68,7 +69,7 @@ namespace _3PA.API.Controllers
 		{
 			try 
       {
-        return Ok(_mediator.Send(new GetCountyIdFromFilenameQuery(usState, category, fileName)));
+        return Ok(await _mediator.Send(new GetCountyIdFromFilenameQuery(usState, category, fileName)));
       }
       catch (Exception)
       {
@@ -84,7 +85,7 @@ namespace _3PA.API.Controllers
       {
         return Ok(await _mediator.Send(new GetManifestSummaryQuery()));
       }
-      catch (Exception ex)
+      catch (Exception)
       {
         return BadRequest("Failled to get county data.");
       }

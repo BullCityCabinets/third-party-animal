@@ -25,9 +25,11 @@ namespace _3PA.API.Services.Geographic.CountyNameById.Queries
       var canParse = geoData.CountyIds!.TryGetValue(request.CountyId, out var properName);
       if (canParse)
       {
-        return new CountyNameByIdResponse(request, properName!);
+        var response = new CountyNameByIdResponse(request, properName!);
+        return await Task.FromResult(response);
       }
-      return new CountyNameByIdResponse(request);
+      var failResponse = new CountyNameByIdResponse(request, "Invalid Code");
+      return await Task.FromResult(failResponse);
     }
   }
 }

@@ -24,7 +24,7 @@ namespace _3PA.Core.Models.Fl
     {
       string[] values = row.Split('\t');
       CountyCode = (string?)values[0];
-      VoterId = (string?)values[1];
+      VoterId = (string?)values[1]!;
       ElectionDate = (string?)values[2];
       ElectionType = (string?)values[3];
       HistoryCode = (string?)values[4];

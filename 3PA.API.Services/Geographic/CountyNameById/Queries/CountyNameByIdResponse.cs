@@ -4,7 +4,7 @@ namespace _3PA.API.Services.Geographic.CountyNameById.Queries
 {
   public class CountyNameByIdResponse
   {
-    public CountyNameByIdResponse(CountyNameByIdQuery query, string properName = "Invalid Code")
+    public CountyNameByIdResponse(CountyNameByIdQuery query, string properName)
     {
       UsState = query.UsState.ToString();
       CountyId = query.CountyId;
