@@ -3,7 +3,7 @@ namespace _3PA.API.Services.PublicRecords.Consumer.Queries.GetCountyIdFromFilena
 {
 	public class GetCountyIdFromFilenameResponse
 	{
-		public GetCountyIdFromFilenameResponse(GetCountyIdFromFilenameQuery query, string countyId)
+		public GetCountyIdFromFilenameResponse(GetCountyIdFromFileNameQuery query, string countyId)
 		{
 			UsState = query.UsState.ToString();
 			FileName = query.FileName;

@@ -1,17 +1,16 @@
 ﻿using _3PA.Core.Models;
 using MediatR;
-namespace _3PA.API.Services.PublicRecords.Consumer.Queries.GetCountyIdFromFilename
+namespace _3PA.API.Services.PublicRecords.Consumer.Queries.GetCountyIdFromFileName;
+
+public class GetCountyIdFromFileNameQuery : IRequest<GetCountyIdFromFilenameResponse>
 {
-	public class GetCountyIdFromFilenameQuery : IRequest<GetCountyIdFromFilenameResponse>
+  public GetCountyIdFromFileNameQuery(UsState usState, Category category, string fileName)
   {
-		public GetCountyIdFromFilenameQuery(UsState usState, Category category,string fileName)
-		{
-			UsState = usState;
-			Category = category;
-			FileName = fileName;
-		}
-		public UsState UsState { get; set; }
-		public Category Category { get; set; }
-		public string FileName { get; set; }
-	}
+    UsState = usState;
+    Category = category;
+    FileName = fileName;
+  }
+  public UsState UsState { get; set; }
+  public Category Category { get; set; }
+  public string FileName { get; set; }
 }

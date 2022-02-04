@@ -2,9 +2,9 @@
 using MediatR;
 namespace _3PA.API.Services.PublicRecords.Consumer.Queries.GetCountyIdFromFilename
 {
-	public class GetCountyIdFromFilenameHandler : IRequestHandler<GetCountyIdFromFilenameQuery, GetCountyIdFromFilenameResponse>
+	public class GetCountyIdFromFilenameHandler : IRequestHandler<GetCountyIdFromFileNameQuery, GetCountyIdFromFilenameResponse>
 	{
-		public Task<GetCountyIdFromFilenameResponse> Handle(GetCountyIdFromFilenameQuery request, CancellationToken cancellationToken)
+		public Task<GetCountyIdFromFilenameResponse> Handle(GetCountyIdFromFileNameQuery request, CancellationToken cancellationToken)
 		{
 			var countyId = "";
 			switch (request.UsState)
